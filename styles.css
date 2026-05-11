@@ -366,6 +366,7 @@ body.menu-open .overlay-meta { opacity: 1; transform: translateY(0); }
 
 /* Service cards */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.cards-4 { grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1056,6 +1057,7 @@ body.menu-open .overlay-meta { opacity: 1; transform: translateY(0); }
   .hero-visual { order: -1; }
   .bars-art { height: 220px; width: 240px; gap: 18px; }
   .cards { grid-template-columns: repeat(2, 1fr); }
+  .cards-4 { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .portfolio { grid-template-columns: repeat(2, 1fr); }
   .mockup-grid { grid-template-columns: repeat(2, 1fr); }
