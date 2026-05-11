@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ASG Web Design — Custom Websites for Growing Businesses</title>
-  <meta name="description" content="ASG Web Design builds modern, fast, conversion-focused websites for small businesses and startups. Get a free quote today." />
+  <meta name="description" content="ASG Web Design builds modern, fast, conversion-focused websites for small businesses and startups." />
   <link rel="icon" type="image/png" href="albooma_logo_square_dark.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,32 +14,43 @@
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a href="#top" class="logo header-logo">
+      <a href="index.html" class="logo header-logo" aria-label="ASG Web Design — Home">
         <span class="header-logo-pill">
           <img src="albooma_logo_square_dark.png" alt="Ablooma Systems Group" width="48" height="48" />
         </span>
       </a>
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#work">Work</a>
-        <a href="#contact" class="btn btn-primary btn-sm">Get a Quote</a>
-      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="overlayMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
+  <nav class="overlay-menu" id="overlayMenu" aria-hidden="true">
+    <div class="overlay-inner">
+      <ul class="overlay-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="overlay-meta">
+        <span>ASG Web Design · a division of Ablooma Systems Group</span>
+        <a href="mailto:ian12baker@gmail.com">ian12baker@gmail.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-copy">
+        <div>
           <span class="eyebrow">Custom Websites · Built to Convert</span>
-          <h1>Websites that grow your business — not just sit there.</h1>
-          <p class="lead">
-            ASG Web Design partners with small businesses, contractors, and startups to build modern, lightning-fast websites that turn visitors into customers.
-          </p>
+          <h1>Websites that <span class="gradient-text">grow your business</span> — not just sit there.</h1>
+          <p class="lead">ASG Web Design partners with small businesses, contractors, and startups to build modern, lightning-fast websites that turn visitors into customers.</p>
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">Start Your Project</a>
-            <a href="#work" class="btn btn-ghost">See Our Work</a>
+            <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
+            <a href="work.html" class="btn btn-ghost btn-lg">See Our Work</a>
           </div>
           <ul class="hero-points">
             <li>Mobile-first, fully responsive</li>
@@ -48,173 +59,86 @@
           </ul>
         </div>
         <div class="hero-visual" aria-hidden="true">
-          <div class="browser">
-            <div class="browser-bar">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="browser-body">
-              <div class="skeleton skeleton-hero"></div>
-              <div class="skeleton skeleton-line"></div>
-              <div class="skeleton skeleton-line short"></div>
-              <div class="skeleton-row">
-                <div class="skeleton skeleton-card"></div>
-                <div class="skeleton skeleton-card"></div>
-                <div class="skeleton skeleton-card"></div>
-              </div>
-            </div>
+          <div class="bars-art">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section class="section section-alt">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">What We Do</span>
-          <h2>Services tailored to your goals</h2>
-          <p>From a one-page brochure site to a full e-commerce build, ASG covers every step.</p>
+          <h2>Everything you need to launch.</h2>
+          <p>From a one-page brochure site to full e-commerce, ASG handles design, development, and launch — start to finish.</p>
         </div>
         <div class="cards">
           <article class="card">
             <div class="card-icon">01</div>
-            <h3>Custom Web Design</h3>
-            <p>Unique, on-brand designs crafted from scratch — no cookie-cutter templates.</p>
+            <h3>Custom Design</h3>
+            <p>Unique, on-brand websites crafted from scratch — no cookie-cutter templates.</p>
           </article>
           <article class="card">
             <div class="card-icon">02</div>
             <h3>Development &amp; Launch</h3>
-            <p>Hand-coded or modern frameworks, deployed and ready to scale on day one.</p>
+            <p>Hand-coded sites deployed and ready to scale on day one.</p>
           </article>
           <article class="card">
             <div class="card-icon">03</div>
-            <h3>E-Commerce</h3>
-            <p>Sell products or services with secure checkout, payments, and inventory built in.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">04</div>
             <h3>SEO &amp; Performance</h3>
-            <p>Optimized for Google, fast on every device, and easy for your customers to find.</p>
+            <p>Built for Google, fast on every device, easy for customers to find.</p>
           </article>
-          <article class="card">
-            <div class="card-icon">05</div>
-            <h3>Redesigns</h3>
-            <p>Bring an outdated site up to modern standards without losing what already works.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">06</div>
-            <h3>Ongoing Support</h3>
-            <p>Monthly care plans for updates, backups, security, and content changes.</p>
-          </article>
+        </div>
+        <div style="text-align:center;margin-top:48px;">
+          <a href="services.html" class="btn btn-ghost">See All Services →</a>
         </div>
       </div>
     </section>
 
-    <section id="process" class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">How It Works</span>
-          <h2>A simple, transparent process</h2>
-        </div>
-        <ol class="steps">
-          <li>
-            <span class="step-num">1</span>
-            <h3>Discovery Call</h3>
-            <p>We talk about your business, goals, and what success looks like for your site.</p>
-          </li>
-          <li>
-            <span class="step-num">2</span>
-            <h3>Design &amp; Approval</h3>
-            <p>You see mockups before a single line of code is written. Revisions until you love it.</p>
-          </li>
-          <li>
-            <span class="step-num">3</span>
-            <h3>Build &amp; Launch</h3>
-            <p>I build it out, run quality checks, and deploy it live on your domain.</p>
-          </li>
-          <li>
-            <span class="step-num">4</span>
-            <h3>Support</h3>
-            <p>Optional care plan to keep your site fast, secure, and up to date.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="work" class="section">
+    <section class="section">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Recent Work</span>
-          <h2>Built with care, designed to perform</h2>
-          <p>A few projects we're proud of. Yours could be next.</p>
+          <h2>Built with care, designed to perform.</h2>
         </div>
         <div class="portfolio">
-          <div class="portfolio-item">
+          <a class="portfolio-item" href="work.html">
             <div class="portfolio-img placeholder-1"></div>
             <div class="portfolio-meta">
               <h3>Local Service Business</h3>
-              <p>Brochure site with lead form &amp; service area map.</p>
+              <p>Brochure site with lead form &amp; service map.</p>
             </div>
-          </div>
-          <div class="portfolio-item">
+          </a>
+          <a class="portfolio-item" href="work.html">
             <div class="portfolio-img placeholder-2"></div>
             <div class="portfolio-meta">
               <h3>Boutique E-Commerce</h3>
               <p>Custom storefront with Stripe checkout.</p>
             </div>
-          </div>
-          <div class="portfolio-item">
+          </a>
+          <a class="portfolio-item" href="work.html">
             <div class="portfolio-img placeholder-3"></div>
             <div class="portfolio-meta">
               <h3>Startup Landing Page</h3>
               <p>Conversion-optimized launch page &amp; waitlist.</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section section-cta">
-      <div class="container cta-band">
-        <div>
-          <h2>Ready to upgrade your online presence?</h2>
-          <p>Free 20-minute consult. No pressure, no obligation.</p>
+    <section class="section-cta">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Ready to upgrade your online presence?</h2>
+            <p>Free 20-minute consult. No pressure, no obligation.</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary btn-lg">Book a Free Consult</a>
         </div>
-        <a href="#contact" class="btn btn-primary btn-lg">Book a Free Consult</a>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container contact-grid">
-        <div>
-          <span class="eyebrow">Get In Touch</span>
-          <h2>Let's build something great.</h2>
-          <p>Tell me a little about your project and I'll get back to you within one business day.</p>
-          <ul class="contact-list">
-            <li><strong>Email</strong><a href="mailto:ian12baker@gmail.com">ian12baker@gmail.com</a></li>
-            <li><strong>Response time</strong><span>Within 1 business day</span></li>
-            <li><strong>Based in</strong><span>United States · Available worldwide</span></li>
-          </ul>
-        </div>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required autocomplete="name" />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email" />
-          </div>
-          <div class="field">
-            <label for="business">Business / Project</label>
-            <input id="business" name="business" type="text" autocomplete="organization" />
-          </div>
-          <div class="field">
-            <label for="message">What do you need?</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
-          <p class="form-note" id="formNote" hidden></p>
-        </form>
       </div>
     </section>
   </main>

@@ -1,33 +1,65 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+// Year stamp (footer)
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const form = document.getElementById('contactForm');
-const note = document.getElementById('formNote');
+// Hamburger / overlay menu
+const menuToggle = document.getElementById('menuToggle');
+const overlay = document.getElementById('overlayMenu');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const data = new FormData(form);
-  const name = (data.get('name') || '').toString().trim();
-  const email = (data.get('email') || '').toString().trim();
-  const business = (data.get('business') || '').toString().trim();
-  const message = (data.get('message') || '').toString().trim();
+function setMenu(open) {
+  document.body.classList.toggle('menu-open', open);
+  if (menuToggle) menuToggle.setAttribute('aria-expanded', String(open));
+  if (overlay) overlay.setAttribute('aria-hidden', String(!open));
+}
 
-  if (!name || !email || !message) {
-    showNote('Please fill in your name, email, and message.', 'error');
-    return;
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    setMenu(!document.body.classList.contains('menu-open'));
+  });
+}
+
+if (overlay) {
+  overlay.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => setMenu(false));
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
+    setMenu(false);
   }
-
-  const subject = encodeURIComponent(`New project inquiry from ${name}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nBusiness: ${business || '—'}\n\n${message}`
-  );
-  window.location.href = `mailto:ian12baker@gmail.com?subject=${subject}&body=${body}`;
-
-  showNote("Opening your email app… If nothing happens, email ian12baker@gmail.com directly.", 'success');
-  form.reset();
 });
 
-function showNote(text, type) {
-  note.textContent = text;
-  note.className = `form-note ${type}`;
-  note.hidden = false;
+// Contact form (only on contact page)
+const form = document.getElementById('contactForm');
+if (form) {
+  const note = document.getElementById('formNote');
+  const showNote = (text, type) => {
+    if (!note) return;
+    note.textContent = text;
+    note.className = `form-note ${type}`;
+    note.hidden = false;
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = (data.get('name') || '').toString().trim();
+    const email = (data.get('email') || '').toString().trim();
+    const business = (data.get('business') || '').toString().trim();
+    const message = (data.get('message') || '').toString().trim();
+
+    if (!name || !email || !message) {
+      showNote('Please fill in your name, email, and message.', 'error');
+      return;
+    }
+
+    const subject = encodeURIComponent(`New project inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nBusiness: ${business || '—'}\n\n${message}`
+    );
+    window.location.href = `mailto:ian12baker@gmail.com?subject=${subject}&body=${body}`;
+    showNote("Opening your email app… If nothing happens, email ian12baker@gmail.com directly.", 'success');
+    form.reset();
+  });
 }

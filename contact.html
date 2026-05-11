@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — ASG Web Design</title>
+  <meta name="description" content="Get in touch with ASG Web Design. Tell us about your project and we'll respond within one business day." />
+  <link rel="icon" type="image/png" href="albooma_logo_square_dark.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo header-logo" aria-label="ASG Web Design — Home">
+        <span class="header-logo-pill">
+          <img src="albooma_logo_square_dark.png" alt="Ablooma Systems Group" width="48" height="48" />
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="overlayMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="overlay-menu" id="overlayMenu" aria-hidden="true">
+    <div class="overlay-inner">
+      <ul class="overlay-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="overlay-meta">
+        <span>ASG Web Design · a division of Ablooma Systems Group</span>
+        <a href="mailto:ian12baker@gmail.com">ian12baker@gmail.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Let's build something <span class="gradient-text">great.</span></h1>
+        <p class="lead">Tell us a little about your project. We respond to every message within one business day — no auto-replies, no salespeople.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">Get In Touch</span>
+          <h2>Reach out directly.</h2>
+          <p>Prefer email? Fill out the form to the right, or write us directly. Either way, you'll hear from us — promise.</p>
+          <ul class="contact-list">
+            <li><strong>Email</strong><a href="mailto:ian12baker@gmail.com">ian12baker@gmail.com</a></li>
+            <li><strong>Response time</strong><span>Within 1 business day</span></li>
+            <li><strong>Based in</strong><span>United States · Available worldwide</span></li>
+            <li><strong>Parent company</strong><span>Ablooma Systems Group</span></li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="business">Business / Project</label>
+            <input id="business" name="business" type="text" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="message">What do you need?</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+          <p class="form-note" id="formNote" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions we hear a lot.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>How much does a website cost?</summary>
+            <p>It depends on the scope, but most small-business sites fall between $1,500 and $6,000. We always quote a flat fee in writing before starting — no hourly surprises.</p>
+          </details>
+          <details>
+            <summary>How long does it take?</summary>
+            <p>A simple brochure site typically launches in 2–3 weeks. Larger e-commerce or custom builds usually take 4–8 weeks. The biggest variable is how fast you can review and approve along the way.</p>
+          </details>
+          <details>
+            <summary>Do I own the site when we're done?</summary>
+            <p>Yes — 100%. You own the domain, the code, the content, everything. We don't lock you into proprietary platforms you can't leave.</p>
+          </details>
+          <details>
+            <summary>Can you redesign my existing site?</summary>
+            <p>Absolutely. We do redesigns regularly. We'll preserve your SEO, content, and what's working — and rebuild what isn't.</p>
+          </details>
+          <details>
+            <summary>What if I need changes after launch?</summary>
+            <p>Two options: pay for changes as they come up, or join a monthly care plan that includes a set number of updates plus security, backups, and hosting.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-tagline"><strong>ASG Web Design</strong> · a division of <strong>Ablooma Systems Group</strong></p>
+      </div>
+      <p class="copyright">&copy; <span id="year"></span> Ablooma Systems Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

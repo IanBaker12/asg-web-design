@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — ASG Web Design</title>
+  <meta name="description" content="ASG Web Design is a division of Ablooma Systems Group, focused on building modern websites for small businesses." />
+  <link rel="icon" type="image/png" href="albooma_logo_square_dark.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo header-logo" aria-label="ASG Web Design — Home">
+        <span class="header-logo-pill">
+          <img src="albooma_logo_square_dark.png" alt="Ablooma Systems Group" width="48" height="48" />
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="overlayMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="overlay-menu" id="overlayMenu" aria-hidden="true">
+    <div class="overlay-inner">
+      <ul class="overlay-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="overlay-meta">
+        <span>ASG Web Design · a division of Ablooma Systems Group</span>
+        <a href="mailto:ian12baker@gmail.com">ian12baker@gmail.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">About</span>
+        <h1>We build websites that <span class="gradient-text">earn their keep.</span></h1>
+        <p class="lead">ASG Web Design is a division of Ablooma Systems Group — a small, focused team committed to making the web work harder for small businesses.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow">Our Story</span>
+          <h2>A different kind of web partner.</h2>
+          <p>We started ASG Web Design because too many small businesses get stuck with two bad options: an overpriced agency or a $20 template that looks like every other site on the web.</p>
+          <p>We do things differently. Every site we build is custom — designed around your customers, your goals, and your brand. No bloat, no recycled layouts, no surprise fees. Just thoughtful design and clean code that helps your business grow.</p>
+          <p>Because we're part of Ablooma Systems Group, our clients get the polish of a full systems team without the agency price tag.</p>
+        </div>
+        <div class="about-visual" aria-hidden="true">
+          <img src="albooma_logo_square_dark.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How We Work</span>
+          <h2>Principles we won't compromise on.</h2>
+        </div>
+        <div class="principles">
+          <div class="principle">
+            <h3>Honest pricing</h3>
+            <p>Flat fees, scoped in writing before we start. No vague hourly bills, no "while we're in there" upcharges.</p>
+          </div>
+          <div class="principle">
+            <h3>Real ownership</h3>
+            <p>You own your site, your domain, your content. We don't lock you into proprietary platforms you can't leave.</p>
+          </div>
+          <div class="principle">
+            <h3>Speed matters</h3>
+            <p>Every site we ship is built for sub-2-second load times. Slow sites lose customers; fast sites compound.</p>
+          </div>
+          <div class="principle">
+            <h3>Plain English</h3>
+            <p>We don't hide behind jargon. You'll always know what we're doing, why we're doing it, and what it costs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><span class="stat-value">1:1</span><span class="stat-label">Direct communication</span></div>
+          <div class="stat"><span class="stat-value">100%</span><span class="stat-label">Custom-coded</span></div>
+          <div class="stat"><span class="stat-value">&lt;1 day</span><span class="stat-label">Response time</span></div>
+          <div class="stat"><span class="stat-value">$0</span><span class="stat-label">Discovery calls</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cta">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Let's see if we're a fit.</h2>
+            <p>Twenty minutes on the phone — no obligation, no sales pitch.</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary btn-lg">Book a Free Consult</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-tagline"><strong>ASG Web Design</strong> · a division of <strong>Ablooma Systems Group</strong></p>
+      </div>
+      <p class="copyright">&copy; <span id="year"></span> Ablooma Systems Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — ASG Web Design</title>
+  <meta name="description" content="A selection of recent websites designed and built by ASG Web Design." />
+  <link rel="icon" type="image/png" href="albooma_logo_square_dark.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo header-logo" aria-label="ASG Web Design — Home">
+        <span class="header-logo-pill">
+          <img src="albooma_logo_square_dark.png" alt="Ablooma Systems Group" width="48" height="48" />
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="overlayMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="overlay-menu" id="overlayMenu" aria-hidden="true">
+    <div class="overlay-inner">
+      <ul class="overlay-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="overlay-meta">
+        <span>ASG Web Design · a division of Ablooma Systems Group</span>
+        <a href="mailto:ian12baker@gmail.com">ian12baker@gmail.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Selected Work</span>
+        <h1>Sites built to <span class="gradient-text">perform.</span></h1>
+        <p class="lead">A small selection of recent projects. Each one designed from scratch, built for speed, and tuned for conversions.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="portfolio">
+          <article class="portfolio-item">
+            <div class="portfolio-img placeholder-1"></div>
+            <div class="portfolio-meta">
+              <h3>Local Service Business</h3>
+              <p>Brochure site with lead form &amp; service area map.</p>
+            </div>
+          </article>
+          <article class="portfolio-item">
+            <div class="portfolio-img placeholder-2"></div>
+            <div class="portfolio-meta">
+              <h3>Boutique E-Commerce</h3>
+              <p>Custom storefront with Stripe checkout.</p>
+            </div>
+          </article>
+          <article class="portfolio-item">
+            <div class="portfolio-img placeholder-3"></div>
+            <div class="portfolio-meta">
+              <h3>Startup Landing Page</h3>
+              <p>Conversion-optimized launch page &amp; waitlist.</p>
+            </div>
+          </article>
+          <article class="portfolio-item">
+            <div class="portfolio-img placeholder-4"></div>
+            <div class="portfolio-meta">
+              <h3>Restaurant Site</h3>
+              <p>Menu, reservations, and online ordering integration.</p>
+            </div>
+          </article>
+          <article class="portfolio-item">
+            <div class="portfolio-img placeholder-5"></div>
+            <div class="portfolio-meta">
+              <h3>Portfolio &amp; Blog</h3>
+              <p>Creative portfolio with a built-in writing platform.</p>
+            </div>
+          </article>
+          <article class="portfolio-item">
+            <div class="portfolio-img placeholder-6"></div>
+            <div class="portfolio-meta">
+              <h3>Nonprofit Rebuild</h3>
+              <p>Full redesign with donations and event listings.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt section-tight">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><span class="stat-value">100%</span><span class="stat-label">Custom-built</span></div>
+          <div class="stat"><span class="stat-value">&lt;2s</span><span class="stat-label">Average load time</span></div>
+          <div class="stat"><span class="stat-value">A+</span><span class="stat-label">Mobile readiness</span></div>
+          <div class="stat"><span class="stat-value">24/7</span><span class="stat-label">Support available</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cta">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Want to be next on this list?</h2>
+            <p>Tell us about your project — we'll respond within one business day.</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-tagline"><strong>ASG Web Design</strong> · a division of <strong>Ablooma Systems Group</strong></p>
+      </div>
+      <p class="copyright">&copy; <span id="year"></span> Ablooma Systems Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
