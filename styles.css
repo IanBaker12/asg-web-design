@@ -297,6 +297,71 @@ body.menu-open .overlay-meta { opacity: 1; transform: translateY(0); }
   pointer-events: none;
   overflow: hidden;
 }
+/* Decorated sections (Difference, Pricing) */
+.section-decorated { position: relative; overflow: hidden; }
+.section-decorated > .container { position: relative; z-index: 2; }
+.section-deco {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.section-deco svg { width: 100%; height: 100%; display: block; }
+
+/* Streaks (The Difference section) */
+.section-deco-streaks line {
+  stroke: rgba(95, 224, 213, 0.45);
+  stroke-width: 1;
+  stroke-dasharray: 120 1800;
+  fill: none;
+  animation: streakFlow var(--d, 18s) linear infinite;
+}
+.section-deco-streaks line:nth-child(1) { --d: 18s; animation-delay: 0s; }
+.section-deco-streaks line:nth-child(2) { --d: 22s; animation-delay: -5s; }
+.section-deco-streaks line:nth-child(3) { --d: 16s; animation-delay: -9s; }
+.section-deco-streaks line:nth-child(4) { --d: 20s; animation-delay: -13s; }
+@keyframes streakFlow {
+  to { stroke-dashoffset: -1920; }
+}
+
+/* Rings (Pricing section) */
+.section-deco-rings circle {
+  fill: none;
+  stroke-width: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ringSpin 60s linear infinite;
+}
+.section-deco-rings circle:nth-child(1) {
+  stroke: rgba(95, 224, 213, 0.24);
+  stroke-dasharray: 40 30;
+  animation-duration: 50s;
+}
+.section-deco-rings circle:nth-child(2) {
+  stroke: rgba(95, 224, 213, 0.18);
+  stroke-dasharray: 50 40;
+  animation-duration: 80s;
+  animation-direction: reverse;
+}
+.section-deco-rings circle:nth-child(3) {
+  stroke: rgba(95, 224, 213, 0.13);
+  stroke-dasharray: 60 50;
+  animation-duration: 110s;
+}
+.section-deco-rings circle:nth-child(4) {
+  stroke: rgba(95, 224, 213, 0.09);
+  stroke-dasharray: 70 60;
+  animation-duration: 140s;
+  animation-direction: reverse;
+}
+@keyframes ringSpin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-deco-streaks line, .section-deco-rings circle { animation: none !important; }
+}
+
 /* Constellation network */
 .constellation {
   position: absolute;
