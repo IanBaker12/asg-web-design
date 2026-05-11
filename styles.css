@@ -299,66 +299,101 @@ body.menu-open .overlay-meta { opacity: 1; transform: translateY(0); }
 }
 .shape { position: absolute; display: block; }
 
-.shape-1 {
-  width: 260px; height: 260px;
-  border-radius: 50%;
-  border: 2px solid rgba(95, 224, 213, 0.16);
-  top: 6%; left: -70px;
+/* Mini bar chart motif — echoes the Ablooma logo */
+.shape-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+.shape-bars span {
+  flex: 1;
+  border-radius: 3px;
+  background: linear-gradient(180deg, rgba(95, 224, 213, 0.55), rgba(31, 123, 217, 0.42));
+}
+.shape-bars span:nth-child(1) { height: 55%; opacity: 0.6; }
+.shape-bars span:nth-child(2) { height: 78%; opacity: 0.8; }
+.shape-bars span:nth-child(3) { height: 100%; }
+
+.shape-bars-1 {
+  width: 42px; height: 36px;
+  top: 14%; left: 5%;
   animation: floatA 28s ease-in-out infinite;
 }
-.shape-2 {
-  width: 140px; height: 140px;
-  border-radius: 14px;
-  background: rgba(31, 123, 217, 0.12);
-  top: 14%; right: 8%;
-  transform: rotate(18deg);
-  animation: floatB 32s ease-in-out infinite;
+.shape-bars-2 {
+  width: 32px; height: 26px;
+  top: 62%; right: 10%;
+  --r: -12deg;
+  transform: rotate(-12deg);
+  animation: floatB 32s -8s ease-in-out infinite;
 }
-.shape-3 {
-  width: 16px; height: 16px;
+.shape-bars-3 {
+  width: 26px; height: 22px;
+  bottom: 18%; left: 30%;
+  opacity: 0.75;
+  animation: floatC 24s -5s ease-in-out infinite;
+}
+
+/* Stylized browser window — we make websites */
+.shape-window {
+  width: 96px; height: 64px;
+  border: 1.5px solid rgba(95, 224, 213, 0.22);
+  border-radius: 8px;
+  top: 18%; right: 16%;
+  --r: 8deg;
+  transform: rotate(8deg);
+  animation: floatB 36s ease-in-out infinite;
+}
+.shape-window-bar {
+  height: 14px;
+  border-bottom: 1.5px solid rgba(95, 224, 213, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+}
+.shape-window-bar span {
+  width: 4px; height: 4px;
   border-radius: 50%;
-  background: rgba(95, 224, 213, 0.55);
-  box-shadow: 0 0 24px rgba(95, 224, 213, 0.45);
-  top: 38%; right: 22%;
+  background: rgba(95, 224, 213, 0.42);
+}
+
+/* Code bracket — the craft */
+.shape-code {
+  font-family: 'Inter', monospace;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgba(95, 224, 213, 0.20);
+  letter-spacing: -0.05em;
+  bottom: 16%; left: 14%;
+  --r: -8deg;
+  transform: rotate(-8deg);
+  animation: floatB 30s -10s ease-in-out infinite;
+}
+
+/* Glowing accent dots */
+.shape-dot { border-radius: 50%; }
+.shape-dot-1 {
+  width: 12px; height: 12px;
+  background: rgba(95, 224, 213, 0.65);
+  box-shadow: 0 0 24px rgba(95, 224, 213, 0.5);
+  top: 40%; right: 40%;
   animation: floatC 18s ease-in-out infinite;
 }
-.shape-4 {
-  width: 90px; height: 90px;
-  border-radius: 50%;
-  border: 2px solid rgba(95, 224, 213, 0.14);
-  bottom: 14%; left: 8%;
-  animation: floatA 24s -8s ease-in-out infinite;
-}
-.shape-5 {
-  width: 70px; height: 70px;
-  border-radius: 12px;
-  background: rgba(95, 224, 213, 0.10);
-  bottom: 22%; right: 28%;
-  transform: rotate(32deg);
-  animation: floatB 26s -10s ease-in-out infinite;
-}
-.shape-6 {
-  width: 11px; height: 11px;
-  border-radius: 50%;
+.shape-dot-2 {
+  width: 8px; height: 8px;
   background: rgba(77, 168, 224, 0.7);
-  box-shadow: 0 0 18px rgba(77, 168, 224, 0.5);
-  top: 58%; left: 18%;
-  animation: floatC 20s -5s ease-in-out infinite;
+  box-shadow: 0 0 16px rgba(77, 168, 224, 0.45);
+  bottom: 32%; right: 22%;
+  animation: floatC 22s -7s ease-in-out infinite;
 }
-.shape-7 {
-  width: 50px; height: 50px;
-  border-radius: 10px;
-  border: 2px solid rgba(31, 123, 217, 0.22);
-  top: 26%; left: 36%;
-  transform: rotate(45deg);
-  animation: floatB 36s -14s ease-in-out infinite;
-}
-.shape-8 {
-  width: 9px; height: 9px;
+
+/* Outlined ring for balance */
+.shape-ring {
+  width: 200px; height: 200px;
   border-radius: 50%;
-  background: rgba(95, 224, 213, 0.6);
-  bottom: 32%; left: 42%;
-  animation: floatC 22s -3s ease-in-out infinite;
+  border: 1.5px solid rgba(95, 224, 213, 0.13);
+  top: 8%; right: -50px;
+  animation: floatA 34s -12s ease-in-out infinite;
 }
 
 @keyframes floatA {
@@ -366,17 +401,13 @@ body.menu-open .overlay-meta { opacity: 1; transform: translateY(0); }
   50% { transform: translate(35px, -45px); }
 }
 @keyframes floatB {
-  0%, 100% { transform: rotate(var(--r, 18deg)) translate(0, 0); }
-  50% { transform: rotate(calc(var(--r, 18deg) + 8deg)) translate(-28px, 32px); }
+  0%, 100% { transform: rotate(var(--r, 0deg)) translate(0, 0); }
+  50% { transform: rotate(calc(var(--r, 0deg) + 6deg)) translate(-28px, 32px); }
 }
 @keyframes floatC {
   0%, 100% { transform: translate(0, 0); }
   50% { transform: translate(-22px, -34px); }
 }
-
-.shape-2 { --r: 18deg; }
-.shape-5 { --r: 32deg; }
-.shape-7 { --r: 45deg; }
 
 @media (prefers-reduced-motion: reduce) {
   .shape { animation: none !important; }
