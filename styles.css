@@ -383,6 +383,21 @@ body.menu-open .overlay-meta { opacity: 1; transform: translateY(0); }
 .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
 .hero h1 { margin-bottom: 22px; }
 .lead { font-size: 1.05rem; color: var(--text-soft); margin-bottom: 28px; max-width: 540px; }
+.hero-tagline {
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: var(--text);
+  margin: 4px 0 18px;
+  max-width: 540px;
+  line-height: 1.4;
+}
+.hero-tagline strong {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--brand-2), var(--brand));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
 .hero-points { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; color: var(--muted); font-size: 0.95rem; }
 .hero-points li::before { content: '✓'; color: var(--brand-2); font-weight: 800; margin-right: 12px; }
