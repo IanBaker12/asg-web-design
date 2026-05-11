@@ -2,7 +2,7 @@
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Scroll reveal — fade elements in as they enter the viewport
+// Scroll reveal: fade elements in as they enter the viewport
 const revealEls = document.querySelectorAll('.reveal');
 if (revealEls.length && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
@@ -72,7 +72,7 @@ if (form) {
 
     const subject = encodeURIComponent(`New project inquiry from ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nBusiness: ${business || '—'}\n\n${message}`
+      `Name: ${name}\nEmail: ${email}\nBusiness: ${business || 'N/A'}\n\n${message}`
     );
     window.location.href = `mailto:ian12baker@gmail.com?subject=${subject}&body=${body}`;
     showNote("Opening your email app… If nothing happens, email ian12baker@gmail.com directly.", 'success');
