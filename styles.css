@@ -352,7 +352,9 @@ body.menu-open .overlay-meta { opacity: 1; transform: translateY(0); }
 
 /* Stats / principles */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stats-6 { grid-template-columns: repeat(3, 1fr); gap: 32px 28px; }
 .stat { text-align: center; }
+.stats-6 .stat-label { max-width: 240px; margin: 0 auto; line-height: 1.45; }
 .stat-value {
   display: block;
   font-size: clamp(2rem, 4vw, 2.8rem);
