@@ -395,16 +395,16 @@ body.menu-open .overlay-meta { opacity: 1; transform: translateY(0); }
   animation: constellationDrift 28s ease-in-out infinite;
 }
 .c-lines line {
-  stroke: rgba(95, 224, 213, 0.18);
-  stroke-width: 0.9;
+  stroke: rgba(95, 224, 213, 0.11);
+  stroke-width: 0.8;
   stroke-linecap: round;
 }
 .c-dots circle {
-  fill: rgba(95, 224, 213, 0.55);
+  fill: rgba(95, 224, 213, 0.4);
 }
 .c-dots circle.c-glow {
-  fill: rgba(95, 224, 213, 0.95);
-  filter: drop-shadow(0 0 8px rgba(95, 224, 213, 0.7));
+  fill: rgba(95, 224, 213, 0.72);
+  filter: drop-shadow(0 0 7px rgba(95, 224, 213, 0.45));
   animation: starPulse 4s ease-in-out infinite;
 }
 .c-dots circle.c-glow:nth-of-type(1) { animation-delay: 0s; }
